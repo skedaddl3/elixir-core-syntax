@@ -1,19 +1,9 @@
 defmodule ElixirCoreSyntax do
-  def main do
-    do_stuff()
-  end
-
-  def do_stuff do
-    IO.puts("Factorial of 4 is #{factorial(4)}")
-  end
-
-  def factorial(num) do
-    if num <= 1 do
-      1
-    else
-      result = num * factorial(num - 1)
-      IO.puts("Result After recursion: #{result}")
-      result
-    end
+  def create_todos do
+    # Pipe Operator
+    # The result on the left, will be passed to the right hand size.
+    number_of_tasks =
+      IO.gets("Enter the numbers of todos you want to add: ")
+      |> Integer.parse()
   end
 end
