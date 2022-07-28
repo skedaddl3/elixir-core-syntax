@@ -1,18 +1,19 @@
 defmodule ElixirCoreSyntax do
-  @moduledoc """
-  Documentation for `ElixirCoreSyntax`.
-  """
+  def main do
+    do_stuff()
+  end
 
-  @doc """
-  Hello world.
+  def do_stuff do
+    IO.puts("Factorial of 4 is #{factorial(4)}")
+  end
 
-  ## Examples
-
-      iex> ElixirCoreSyntax.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def factorial(num) do
+    if num <= 1 do
+      1
+    else
+      result = num * factorial(num - 1)
+      IO.puts("Result After recursion: #{result}")
+      result
+    end
   end
 end
